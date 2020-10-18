@@ -74,6 +74,13 @@ class UIFirewall:
             print "%s IP is blocked now"%(MAC)
             
         except:
-            print "%s IP is already blocked"%(MAC)    
+            print "%s IP is already blocked"%(MAC) 
+            
+    def remove_IP(self,IP_address1):
+	   try:     
+        #print '%s'%(IP_address1)
+	    self.check_IP_add(IP_address1)
+       except:
+        print "%s IP is already deleted"%(IP_address1)    
 
 thread1=UIFirewall()
